@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calisthenics | Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Calisthenics</h1>
+    <p>Building strength with nothing but your bodyweight.</p>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="current">Home</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="routines.html">Routines</a></li>
+        <li><a href="journey.html">My Journey</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!--
+      MDN EXPLORATION #1 (attribute): srcset
+      What it is: an attribute on <img> that lists several versions of the same
+                  image at different widths so the browser can pick the best one.
+      Where:      the hero <img> just below, in index.html.
+      How I use it: I offer 180px and 360px wide versions of the calisthenics
+                  logo. "sizes" tells the browser the image is shown 360px wide,
+                  so it picks the 360px file on normal screens and could use the
+                  smaller 180px file where less detail is needed. src is the
+                  fallback for browsers without srcset.
+    -->
+    <img class="hero-image"
+         src="images/calisthenics-logo-360.jpg"
+         srcset="images/calisthenics-logo-180.jpg 180w, images/calisthenics-logo-360.jpg 360w"
+         sizes="360px"
+         alt="The word Calisthenics surrounded by white silhouettes doing bodyweight skills like handstands, planches and pull-ups">
+
+    <h2>What is calisthenics?</h2>
+
+    <!--
+      MDN EXPLORATION #2 (element): <dfn>
+      What it is: the "definition" element. It marks the term that is being
+                  defined in the surrounding sentence.
+      Where:      in the paragraph directly below in index.html (and again in
+                  the glossary on exercises.html).
+      How I use it: it wraps the word "calisthenics" where I define it. In
+                  styles.css the dfn rule colors it orange and makes it bold italic.
+    -->
+    <p class="lead">
+      <dfn>Calisthenics</dfn> is a style of strength training that uses your own
+      bodyweight as resistance. Push-ups, pull-ups, squats and dips are all
+      calisthenics, and you can do them at the gym, at a park or at home.
+    </p>
+
+    <h2>Why I started</h2>
+    <p>
+      I got into calisthenics because I was weak at bodyweight training. When I
+      first started, I couldn't do a single pull-up or a single dip. My push-ups
+      were weak too, and my form was sloppy: my hips sagged, my elbows flared out
+      and I rushed through every rep.
+    </p>
+    <p>
+      Instead of giving up, I started training more often and used resistance
+      bands to help me. A band looped over the pull-up bar or the dip station
+      takes away some of your bodyweight, so I could finally do full reps with
+      good form. As I got stronger, I switched to lighter and lighter bands until
+      I could do the movements on my own. My push-ups got cleaner and stronger
+      at the same time.
+    </p>
+
+    <h2>The best of both worlds</h2>
+    <p>
+      I don't only do calisthenics. I also lift weights at the gym to build
+      strength and hypertrophy (muscle size). The two styles help each other:
+    </p>
+    <ul>
+      <li><strong>Calisthenics</strong> builds body control, balance, mobility and
+          the ability to move my own bodyweight well.</li>
+      <li><strong>Weightlifting</strong> lets me add exact amounts of weight, so I
+          can keep making my muscles bigger and stronger over time.</li>
+      <li><strong>Weighted calisthenics</strong> connects the two. Adding weight
+          to dips and pull-ups built my overall strength so much that my big
+          compound lifts &ndash; bench press, deadlift and squat &ndash; went up
+          too, even without extra time spent on them.</li>
+    </ul>
+    <p>
+      Combining them gives me the best of both worlds: I'm strong under a barbell
+      <em>and</em> strong on the bar. This site collects the exercises I use, the
+      weekly routine I follow, and a log of how my progress has gone.
+    </p>
+
+    <h2>Why train this way?</h2>
+    <div class="card-grid">
+      <section class="card">
+        <h3>Free &amp; flexible</h3>
+        <p>No equipment is required to begin. A floor, a sturdy bar and a bit of space are enough.</p>
+      </section>
+      <section class="card">
+        <h3>Full-body strength</h3>
+        <p>Most movements train several muscle groups at once, which builds balanced, functional strength.</p>
+      </section>
+      <section class="card">
+        <h3>Scales with you</h3>
+        <p>Every exercise has easier and harder versions, so beginners and advanced athletes can both progress.</p>
+      </section>
+    </div>
+
+    <h2>Explore the site</h2>
+    <ul>
+      <li><a href="exercises.html">Exercises</a> &ndash; the core movements and how to progress them.</li>
+      <li><a href="routines.html">Routines</a> &ndash; my push, pull, legs, rest cycle, which you can download.</li>
+      <li><a href="journey.html">My Journey</a> &ndash; from zero pull-ups to muscle-ups and weighted lifts.</li>
+    </ul>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Calisthenics &middot; Project 1: Personal Website</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calisthenics | Routines</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Calisthenics</h1>
+    <p>Building strength with nothing but your bodyweight.</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="exercises.html">Exercises</a></li>
+        <li><a href="routines.html" class="current">Routines</a></li>
+        <li><a href="journey.html">My Journey</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <h2>My 4-day training cycle</h2>
+    <p class="lead">
+      I train push, pull and legs on three days in a row, then take one rest day,
+      and repeat: push, pull, legs, rest, push, pull, legs, rest.
+    </p>
+    <p>
+      Because the cycle is 4 days long instead of 7, my training days don't land on
+      the same weekdays every week. That's fine with me &ndash; I just follow the
+      cycle and let the calendar move. Each time the cycle repeats, I switch
+      between <strong>Cycle A</strong> and <strong>Cycle B</strong>, which have
+      different main lifts, so every main lift comes around once every 8 days.
+    </p>
+
+    <!--
+      MDN EXPLORATION #4 (element): <tfoot>
+      What it is: the table footer element. It groups the summary/footer rows of
+                  a table, such as totals.
+      Where:      at the bottom of the training cycle table below in routines.html.
+      How I use it: it holds one summary row with the number of training days and
+                  rest days in each cycle. In styles.css the tfoot rule gives it
+                  an orange top border so it stands out from the regular rows.
+    -->
+    <table>
+      <caption>One full cycle (Cycle A and Cycle B alternate)</caption>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Focus</th>
+          <th>Cycle A main lift</th>
+          <th>Cycle B main lift</th>
+          <th>Accessories</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Day 1</td>
+          <td>Push</td>
+          <td>Weighted dips</td>
+          <td>Band-assisted wall handstand push-ups</td>
+          <td>Archer push-ups, bench press, straight bar dips, triceps work</td>
+        </tr>
+        <tr>
+          <td>Day 2</td>
+          <td>Pull</td>
+          <td>Weighted pull-ups</td>
+          <td>Muscle-ups</td>
+          <td>Ice cream makers, deadlifts, lower back extensions, rows, inverted hanging rows</td>
+        </tr>
+        <tr>
+          <td>Day 3</td>
+          <td>Legs</td>
+          <td>Pistol squats and weighted pistol squats</td>
+          <td>Heavy barbell squats</td>
+          <td>Leg extensions, hamstring curls, Bulgarian split squats, calf raises, hanging leg raises, L-sits</td>
+        </tr>
+        <tr>
+          <td>Day 4</td>
+          <td>Rest</td>
+          <td colspan="3">Recovery: light walking and stretching</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Per cycle</th>
+          <td colspan="4">3 training days + 1 rest day, repeated all year round</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2>Sets, reps and rest</h2>
+    <div class="card-grid">
+      <section class="card">
+        <h3>Main lift</h3>
+        <p>4&ndash;5 sets of 3&ndash;6 heavy reps, resting 2&ndash;3 minutes between sets.</p>
+      </section>
+      <section class="card">
+        <h3>Accessories</h3>
+        <p>3 sets of 8&ndash;12 reps, resting 60&ndash;90 seconds between sets.</p>
+      </section>
+      <section class="card">
+        <h3>Rest day</h3>
+        <p>No lifting. Sleep, eat enough protein and let the muscles recover.</p>
+      </section>
+    </div>
+
+    <h2>Take it with you</h2>
+    <p>Save the cycle as a text file so you can keep it on your phone at the gym.</p>
+
+    <!--
+      MDN EXPLORATION #5 (attribute): download
+      What it is: an attribute on <a> links that tells the browser to download
+                  the linked file instead of navigating to it.
+      Where:      on the "Download the plan" link just below in routines.html.
+      How I use it: it points at downloads/weekly-workout-plan.txt, and its value
+                  sets the file name the visitor's browser will save it as.
+    -->
+    <p>
+      <a class="button" href="downloads/weekly-workout-plan.txt" download="calisthenics-ppl-plan.txt">Download the plan</a>
+    </p>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Calisthenics &middot; Project 1: Personal Website</p>
+  </footer>
+
+</body>
+</html>

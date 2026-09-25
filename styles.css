@@ -1,0 +1,263 @@
+/* ==========================================================
+   styles.css - main stylesheet for the Calisthenics site
+   Shared by index.html, exercises.html, routines.html, journey.html
+   ========================================================== */
+
+/* ---------- Color palette & base ---------- */
+:root {
+  --bg: #12151b;
+  --surface: #1c212a;
+  --surface-alt: #242b36;
+  --text: #eef1f6;
+  --muted: #b4bccb;
+  --accent: #ff8a3d;
+  --accent-dark: #c9600f;
+  --border: #354052;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* ---------- Header & navigation ---------- */
+header {
+  background-color: var(--surface);
+  border-bottom: 4px solid var(--accent);
+  padding: 20px 40px 0;
+}
+
+header h1 {
+  margin: 0 0 4px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+header p {
+  margin: 0 0 16px;
+  color: var(--muted);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 8px;
+}
+
+nav a {
+  display: block;
+  padding: 10px 22px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 8px 8px 0 0;
+}
+
+nav a:hover {
+  background-color: var(--surface-alt);
+  color: var(--accent);
+}
+
+/* Highlights the link for the page you are currently on */
+nav a.current {
+  background-color: var(--accent);
+  color: #12151b;
+}
+
+/* ---------- Main content ---------- */
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+}
+
+h2 {
+  color: var(--accent);
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 6px;
+  margin-top: 48px;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 0;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: #ffb37a;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Square logo image on the home page, centered and kept at its real size
+   (360px) so it doesn't get stretched and blurry */
+.hero-image {
+  width: 360px;
+  margin: 0 auto 24px;
+  border-radius: 12px;
+  border: 2px solid var(--border);
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: var(--muted);
+}
+
+/* ---------- Cards ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card ul,
+.card ol {
+  padding-left: 22px;
+  margin-bottom: 0;
+}
+
+/* Small orange labels inside the cards (e.g. "Day 1 - main lift") */
+.card h4 {
+  margin: 16px 0 4px;
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-grid.two-col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* ---------- Tables ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--surface);
+  margin: 20px 0;
+}
+
+caption {
+  text-align: left;
+  color: var(--muted);
+  padding: 8px 0;
+  font-style: italic;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+thead th {
+  background-color: var(--accent);
+  color: #12151b;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--surface-alt);
+}
+
+tfoot th,
+tfoot td {
+  background-color: var(--surface-alt);
+  border-top: 3px solid var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- Glossary / definition list ---------- */
+dl dt {
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+dl dd {
+  margin-left: 24px;
+  color: var(--muted);
+}
+
+/* Style for the <dfn> element so defined terms stand out */
+dfn {
+  color: var(--accent);
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ---------- Journey log entries ---------- */
+article.entry {
+  background-color: var(--surface);
+  border-left: 5px solid var(--accent);
+  border-radius: 6px;
+  padding: 16px 24px;
+  margin-bottom: 20px;
+}
+
+article.entry time {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---------- Buttons & call-outs ---------- */
+.button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #12151b;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #ffb37a;
+  color: #12151b;
+}
+
+.note {
+  background-color: var(--surface-alt);
+  border: 1px dashed var(--accent);
+  border-radius: 8px;
+  padding: 14px 20px;
+  color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--surface);
+  border-top: 4px solid var(--accent);
+  text-align: center;
+  color: var(--muted);
+  padding: 20px;
+  font-size: 0.9rem;
+}
